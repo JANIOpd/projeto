@@ -1,0 +1,64 @@
+/* ===== inicio ===== */
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #011638;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 40px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    .container {
+      text-align: center;
+      background-color: #f8f9fa;
+      color: #011638;
+      padding: 40px;
+      border-radius: 10px;
+      width: 350px;
+    }
+
+    .container h1 {
+      margin-bottom: 20px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn {
+      background-color: #011638;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #00337c;
+    }
+    .logo{
+  width: 150px;
+  height: 150px;
+
+}
