@@ -1,0 +1,60 @@
+/* ===== Estilos Gerais ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+body {
+  background: #ffffff;
+  color: #222;
+}
+
+/* ===== recurso ===== */
+
+
+.recursos-tabela th,
+.recursos-tabela td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+
+
+}
+
+.recursos-tabela th {
+  background-color: #001133;
+  color: white;
+
+}
+
+.recursos input {
+  width: 90%;
+  padding: 6px;
+  border: 1px solid #001133;
+  border-radius: 4px;
+}
+
+.recursos button {
+  background: #001133;
+  color: #fff;
+  border: none;
+  padding: 12px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+ 
+}
+
+.recursos button:hover {
+  background: #00337c;
+
+}
+
+.recursos-acoes {
+height: 70px;
+width: 120px;
+
+}
