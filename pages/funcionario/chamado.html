@@ -1,55 +1,137 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abertura de Ordem de Serviço - Oficina</title>
-    <link rel="stylesheet" href="teste.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Painel - Oficina Mecânica</title>
+        <link rel="stylesheet" href="teste2.css">
+    </head>
+    <body>
 
-<div class="container">
-    <div class="header">
-        <h1>Auto Mech +</h1>
-        <p>Abertura de Ordem de Serviço</p>
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+            <img class="logo" src="img/Auto_1.png" alt="automech">
+
+            <nav>
+                <h3>Serviços</h3>
+                <a href="estoque.html">Ativos</a>
+                <a class="active" href="#">Chamados</a>
+                <a href="#">Abrir Chamado</a>
+
+                <h3>Gestão</h3>
+                <a href="#">Clientes</a>
+                <a href="#">Veículos</a>
+
+                <h3>Administração</h3>
+                <a href="#">Configurações</a>
+            </nav>
+        </aside>
+
+        
+        <main class="content">
+
+            <!-- HEADER SUPERIOR -->
+            <header class="topbar">
+                <div class="breadcrumb">Home / Chamados</div>
+
+                <div class="profile">
+                    <span>Mecânico Master</span>
+                    <img src="https://i.imgur.com/0y8Ftya.png">
+                </div>
+            </header>
+
+
+            <!-- CARDS DE MÉTRICAS -->
+            <section class="cards">
+                <div class="card yellow">3<br><span>Total de Chamados</span></div>
+                <div class="card green">2<br><span>Em Atendimento</span></div>
+                <div class="card orange">1<br><span>Pendentes</span></div>
+                <div class="card blue">0<br><span>Concluídos</span></div>
+            </section>
+
+
+            <!-- FILTROS -->
+            <section class="filtros">
+                <select>
+                    <option>Status</option>
+                    <option>Aberto</option>
+                    <option>Em andamento</option>
+                    <option>Concluído</option>
+                </select>
+
+                <select>
+                    <option>Prioridade</option>
+                    <option>Alta</option>
+                    <option>Média</option>
+                    <option>Baixa</option>
+                </select>
+
+                <button class="btn">Filtrar</button>
+            </section>
+
+
+            <!-- TABELA -->
+            <section class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Veículo</th>
+                            <th>Placa</th>
+                            <th>Serviço</th>
+                            <th>Status</th>
+                            <th>Prioridade</th>
+                            <th>Abertura</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>Diógenes Almeida</td>
+                            <td>Voyage 1990</td>
+                            <td>120ERTH</td>
+                            <td>Freio</td>
+                            <td><span class="badge aberto">Aberto</span></td>
+                            <td><span class="prio alta">Alta</span></td>
+                            <td>21/11/2025</td>
+                            <td><button class="btn-ver">Ver</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>João Negrão</td>
+                            <td>Peugeot 2012</td>
+                                <td>HY7IS09</td>
+                            <td>Cambio</td>
+                            <td><span class="badge andamento">Em andamento</span></td>
+                            <td><span class="prio media">Média</span></td>
+                            <td>20/11/2025</td>
+                            <td><button class="btn-ver">Ver</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Wyttor Ramos</td>
+                            <td>Corolla 2017</td>
+                                <td>CHAD210 </td>
+                            <td>Turbo</td>
+                            <td><span class="badge concluido">Concluído</span></td>
+                            <td><span class="prio baixa">Baixa</span></td>
+                            <td>19/11/2025</td>
+                            <td><button class="btn-ver">Ver</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
     </div>
 
-    <form class="form">
-
-        <label>Nome do Cliente</label>
-        <input type="text" placeholder="Digite o nome do cliente" required>
-
-        <label>Veículo</label>
-        <input type="text" placeholder="Ex: Fiat Uno 2010 1.0" required>
-
-        <label>Placa</label>
-        <input type="text" placeholder="XXX-0X00" required>
-
-        <label>Tipo de Serviço</label>
-     
-      
-        <select required>
-            <option value="">Selecione...</option>
-            <option>Troca de óleo</option>
-            <option>Revisão geral</option>
-            <option>Suspensão</option>
-            <option>Freio</option>
-            <option>Diagnóstico eletrônico</option>
-            <option>Outro</option>
-        </select>   <label>Prioridade</label>
-          <select required>
-            <option value="">Selecione...</option>
-            <option>Alta</option>
-            <option>Média</option>
-            <option>Baixa</option>
-         </select>
-            
-        <label>Descrição do Problema</label>
-        <textarea placeholder="Descreva o problema informado pelo cliente..." required></textarea>
-
-        <button type="submit">Abrir OS</button>
-    </form>
-</div>
-
-</body>
-</html>
+    </body>
+    </html>
