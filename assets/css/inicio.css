@@ -1,96 +1,173 @@
-/* ===== inicio ===== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #011638;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #eef1f5; }
+
+.layout {
+    display: flex;
 }
 
-header {
-  top: 0;
-  left: 0;
-  width: 1px;
-  padding: 50px 40px;
-  background-color:#ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: left;
-  a {
-    margin-left: 105em;
-  }
-
-   
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background:  #001133;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
 }
 
-
-.container {
-  text-align: center;
-  background-color: #ffffff;
-  color: #011638;
-  padding: 40px;
-  width: 350px;
-  height: 100%;
-  margin-right: 93em;
-  img{
-    background-color: #ffffff;
-  }
-
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
-.container h1 {
-  margin-bottom: 20px;
+.sidebar h3 {
+    font-size: 14px;
+    margin-top: 15px;
+    opacity: 0.6;
 }
 
-.options {
-  display: flex;
-  flex-direction: column;
-gap: 100px;
+.sidebar a {
+    display: block;
+    color: #d8e2ff;
+    text-decoration: none;
+    padding: 8px 0;
+    margin-left: 10px;
+}
 
+.sidebar a.active {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* CONTEÚDO */
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    width: calc(100% - 240px);
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #555;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* CARDS */
+.cards {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card span {
+    font-size: 14px;
+    display: block;
+    margin-top: 4px;
+}
+
+.yellow { background: #f4c542; }
+.green  { background: #57b86f; }
+.orange { background: #f0a14f; }
+.blue   { background: #5aa2e7; }
+
+/* FILTROS */
+.filtros {
+    margin: 25px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.filtros select {
+    padding: 8px;
+    border-radius: 5px;
 }
 
 .btn {
-  background-color: #011638;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
-
+    background:  #001133;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #00337c;
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
 }
 
-.logo {
-  width: 150px;
-  height: 150px;
+table th {
+    background: #e8ecf2;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
 }
 
-.containertextcenter{
-    width: 10px;
-  height: 10px;
-  color: aqua;
-
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
 }
-.gradeconteiner{
-   text-align: center;
-  background-color: #15ff00;
-  color: #011638;
-  width: 350px;
-  height:120px;
-  margin-right: 93em;
 
+/* STATUS BADGES */
+.badge {
+    padding: 4px 12px;
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
 }
-grade{
-  width: 10px;
-  height: 10px;
-  color: crimson;
+
+.aberto { background: #d9534f; }
+.andamento { background: #f0ad4e; }
+.concluido { background: #5cb85c; }
+
+/* PRIORIDADE */
+.prio {
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.alta { background: #ff6b6b; color: white; }
+.media { background: #f5c16c; color: white; }
+.baixa { background: #8bd36f; color: white; }
+
+.btn-ver {
+    padding: 6px 12px;
+    background: #23395d;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.logo{
+height: 100px;
+    width: 100px;
 }
