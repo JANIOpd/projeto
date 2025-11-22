@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Início - Auto Mech+</title>
-<link rel="stylesheet" href="chamado.css">
-  <header>
-    <nav>
-      <ul>
-        <li><a href="login.html" class="btn">Login</a></li>
-      </ul>
-    </nav>
-  </header>
-<div class="containertextcenter">
-  <div class="gradeconteiner">
-    <div class="grade">
-      Column
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abertura de Ordem de Serviço - Oficina</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Auto Mech +</h1>
+        <p>Abertura de Ordem de Serviço</p>
     </div>
-    <div class="grade">
-      Column
-    </div>
-    <div class="grade">
-      Column
-    </div>
-  </div>
+
+    <form class="form">
+
+        <label>Nome do Cliente</label>
+        <input type="text" placeholder="Digite o nome do cliente" required>
+
+        <label>Veículo</label>
+        <input type="text" placeholder="Ex: Fiat Uno 2010 1.0" required>
+
+        <label>Placa</label>
+        <input type="text" placeholder="XXX-0X00" required>
+
+        <label>Tipo de Serviço</label>
+     
+      
+        <select required>
+            <option value="">Selecione...</option>
+            <option>Troca de óleo</option>
+            <option>Revisão geral</option>
+            <option>Suspensão</option>
+            <option>Freio</option>
+            <option>Diagnóstico eletrônico</option>
+            <option>Outro</option>
+        </select>   <label>Prioridade</label>
+          <select required>
+            <option value="">Selecione...</option>
+            <option>Alta</option>
+            <option>Média</option>
+            <option>Baixa</option>
+         </select>
+            
+        <label>Descrição do Problema</label>
+        <textarea placeholder="Descreva o problema informado pelo cliente..." required></textarea>
+
+        <button type="submit">Abrir OS</button>
+    </form>
 </div>
-  <div class="container">
-    <img class="logo" src="img/Auto_1.png" alt="automech"> 
-    <h1>Ordens</h1>
-    <div class="options">
-      <button class="btn" href="chamado.html">Abrir Chamado</button>
-      <button class="btn" href="estoque.html">Estoque</button>
-      <button class="btn" href="relatorio.html">Relatório</button>
-    </div>
-  </div>
+
 </body>
 </html>
