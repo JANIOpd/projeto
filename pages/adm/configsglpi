@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuração - Estilo GLPI Avançado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f2f5;
+    }
+    .topbar {
+      background: #2a4999;
+      color: white;
+      padding: 12px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .container {
+      display: flex;
+    }
+    .sidebar {
+      width: 220px;
+      background: #e4e7ef;
+      height: 100vh;
+      border-right: 1px solid #c7c9d1;
+    }
+    .sidebar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 14px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid #d2d4dd;
+    }
+    .sidebar li:hover,
+    .sidebar .active {
+      background: #d1d5e4;
+      font-weight: bold;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    .box {
+      background: white;
+      padding: 18px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      border: 1px solid #d4d7e0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .box h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #2a4999;
+    }
+    .input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #b7bacc;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      background: #2a4999;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .btn:hover {
+      background: #203a7a;
+    }
+    .switch {
+      position: relative;
+      width: 50px;
+      height: 24px;
+      display: inline-block;
+    }
+    .switch input { display: none; }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #2a4999;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">GLPI - Configurações Avançadas</header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <ul>
+
+        <li>Funcionários</li>
+        <li>Permissões</li>
+        <li>Clientes</li>
+      </ul>
+    </aside>
+
+    <main class="content">
+
+      <div class="box">
+        <h2>Criar Usuário</h2>
+        <input type="text" class="input" placeholder="Nome do usuário">
+        <input type="email" class="input" placeholder="Email do usuário">
+        <input type="password" class="input" placeholder="Senha">
+        <button class="btn">Criar Usuário</button>
+      </div>
+
+      <div class="box">
+        <h2>Criar Funcionário</h2>
+        <input type="text" class="input" placeholder="Nome do funcionário">
+        <input type="text" class="input" placeholder="Cargo">
+        <button class="btn">Criar Funcionário</button>
+      </div>
+
+      <div class="box">
+        <h2>Permitir Administrador</h2>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
